@@ -1,0 +1,40 @@
+name: greenres_ecosystem
+description: "GreenRes Ecosystem — Africa's AI-Powered Climate Action, Resilience, Learning, Employment & Circular Economy Super App"
+publish_to: 'none'
+version: 0.1.0
+
+environment:
+  sdk: '>=3.3.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.6
+  http: ^1.2.2
+  shared_preferences: ^2.3.3
+  google_fonts: ^6.2.1
+  fl_chart: ^0.68.0
+  percent_indicator: ^4.2.3
+  animate_do: ^3.3.4
+  shimmer: ^3.0.0
+  intl: ^0.19.0
+  flutter_tts: ^4.2.0
+  speech_to_text: ^7.0.0
+  geolocator: ^9.0.2
+  ar_flutter_plugin: ^0.7.3
+  vector_math: ^2.1.4
+  just_audio: ^0.9.40
+  path_provider: ^2.1.4
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^4.0.0
+
+flutter:
+  uses-material-design: true
+  # Fonts are loaded at runtime via the google_fonts package (Sora + Manrope),
+  # so no local font assets are bundled. Swap to bundled .ttf files under
+  # assets/fonts/ later if you need full offline font support.
+  assets:
+    - assets/ar/
