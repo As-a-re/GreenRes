@@ -9,7 +9,7 @@ class BackendApi {
 
   static const String baseUrl = String.fromEnvironment(
     'GREENRES_API_BASE_URL',
-    defaultValue: 'https://greenres.onrender.com',
+    defaultValue: 'https://greenres.onrender.com/api/v1',
   );
 
   static Uri _uri(String path) => Uri.parse('$baseUrl$path');
