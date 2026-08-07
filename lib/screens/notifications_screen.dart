@@ -20,10 +20,10 @@ class NotificationsScreen extends StatelessWidget {
       child: ListView(
         padding: const EdgeInsets.fromLTRB(20, 8, 20, 140),
         children: [
-          Row(
+          const Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              const Text('Notifications',
+              Text('Notifications',
                   style: TextStyle(
                       color: Colors.white,
                       fontSize: 22,

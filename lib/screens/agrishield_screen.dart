@@ -14,7 +14,11 @@ class AgriShieldScreen extends StatefulWidget {
 const _generalCrops = [
   ('Cassava', 'Drought-tolerant, good for most soils', Icons.grass_rounded),
   ('Maize', 'Needs consistent rainfall or irrigation', Icons.eco_rounded),
-  ('Okra', 'Warm-season crop, moderate water needs', Icons.local_florist_rounded),
+  (
+    'Okra',
+    'Warm-season crop, moderate water needs',
+    Icons.local_florist_rounded
+  ),
 ];
 
 class _AgriShieldScreenState extends State<AgriShieldScreen> {
@@ -64,7 +68,9 @@ class _AgriShieldScreenState extends State<AgriShieldScreen> {
                         child: _AlertTile(
                             icon: Icons.grain_rounded,
                             label: 'Drought risk',
-                            status: drought.isEmpty ? 'No active alerts' : '${drought.length} active',
+                            status: drought.isEmpty
+                                ? 'No active alerts'
+                                : '${drought.length} active',
                             color: drought.isEmpty
                                 ? palette.accent
                                 : const Color(0xFFFFC24B))),
@@ -73,7 +79,9 @@ class _AgriShieldScreenState extends State<AgriShieldScreen> {
                         child: _AlertTile(
                             icon: Icons.warning_amber_rounded,
                             label: 'Other climate risk',
-                            status: other.isEmpty ? 'No active alerts' : '${other.length} active',
+                            status: other.isEmpty
+                                ? 'No active alerts'
+                                : '${other.length} active',
                             color: other.isEmpty
                                 ? palette.accent
                                 : const Color(0xFFE85C5C))),
@@ -87,8 +95,8 @@ class _AgriShieldScreenState extends State<AgriShieldScreen> {
                           radius: 16,
                           child: Row(
                             children: [
-                              Icon(Icons.warning_rounded,
-                                  color: const Color(0xFFFFC24B), size: 18),
+                              const Icon(Icons.warning_rounded,
+                                  color: Color(0xFFFFC24B), size: 18),
                               const SizedBox(width: 10),
                               Expanded(
                                 child: Text(
@@ -112,8 +120,10 @@ class _AgriShieldScreenState extends State<AgriShieldScreen> {
                 fontSize: 15,
                 fontWeight: FontWeight.w700)),
         const SizedBox(height: 4),
-        Text('General reference info, not personalized to your soil or exact location',
-            style: TextStyle(color: Colors.white.withValues(alpha: 0.4), fontSize: 10.5)),
+        Text(
+            'General reference info, not personalized to your soil or exact location',
+            style: TextStyle(
+                color: Colors.white.withValues(alpha: 0.4), fontSize: 10.5)),
         const SizedBox(height: 12),
         ..._generalCrops.map((crop) => Padding(
               padding: const EdgeInsets.only(bottom: 10),
@@ -146,7 +156,10 @@ class _AgriShieldScreenState extends State<AgriShieldScreen> {
         const SizedBox(height: 8),
         Text(
           'AgriShield doesn\'t yet have a hyperlocal weather or soil-suitability integration — that\'s the natural next step for this module.',
-          style: TextStyle(color: Colors.white.withValues(alpha: 0.4), fontSize: 10.5, height: 1.4),
+          style: TextStyle(
+              color: Colors.white.withValues(alpha: 0.4),
+              fontSize: 10.5,
+              height: 1.4),
         ),
       ],
     );

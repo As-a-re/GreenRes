@@ -46,8 +46,8 @@ class _SetupScreenState extends State<SetupScreen> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Center(
-                    child:
-                        Icon(Icons.cloud_off_rounded, color: palette.accent, size: 34),
+                    child: Icon(Icons.cloud_off_rounded,
+                        color: palette.accent, size: 34),
                   ),
                   const SizedBox(height: 12),
                   const Text('Can\'t reach the GreenRes backend',
@@ -72,30 +72,38 @@ class _SetupScreenState extends State<SetupScreen> {
                       color: Colors.black.withValues(alpha: 0.25),
                       borderRadius: BorderRadius.circular(10),
                     ),
-                    child: Text(
+                    child: const Text(
                       BackendApi.baseUrl,
-                      style: const TextStyle(
+                      style: TextStyle(
                           color: Colors.white,
                           fontSize: 12.5,
                           fontFamily: 'monospace'),
                     ),
                   ),
                   const SizedBox(height: 16),
-                  Text(
+                  const Text(
                     'To fix this:',
                     style: TextStyle(
-                        color: Colors.white, fontSize: 13, fontWeight: FontWeight.w700),
+                        color: Colors.white,
+                        fontSize: 13,
+                        fontWeight: FontWeight.w700),
                   ),
                   const SizedBox(height: 8),
-                  _step('1', 'Start the backend locally: in /backend run '
-                      '"npm install && cp .env.example .env" — fill in your '
-                      'Supabase project URL and keys — then "npm run dev".'),
-                  _step('2', 'Or point the app at an already-deployed backend by '
-                      'launching with --dart-define=GREENRES_API_BASE_URL='
-                      'https://your-backend.example.com/api/v1'),
-                  _step('3', 'If you\'re running on a physical device or emulator, '
-                      '"localhost" won\'t reach your computer — use your machine\'s '
-                      'LAN IP or 10.0.2.2 for the Android emulator instead.'),
+                  _step(
+                      '1',
+                      'Start the backend locally: in /backend run '
+                          '"npm install && cp .env.example .env" — fill in your '
+                          'Supabase project URL and keys — then "npm run dev".'),
+                  _step(
+                      '2',
+                      'Or point the app at an already-deployed backend by '
+                          'launching with --dart-define=GREENRES_API_BASE_URL='
+                          'https://your-backend.example.com/api/v1'),
+                  _step(
+                      '3',
+                      'If you\'re running on a physical device or emulator, '
+                          '"localhost" won\'t reach your computer — use your machine\'s '
+                          'LAN IP or 10.0.2.2 for the Android emulator instead.'),
                   const SizedBox(height: 18),
                   SizedBox(
                     width: double.infinity,

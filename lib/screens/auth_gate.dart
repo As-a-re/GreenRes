@@ -57,9 +57,9 @@ class _AuthGateState extends State<AuthGate> {
   Widget build(BuildContext context) {
     switch (_state) {
       case _GateState.loading:
-        return WeatherBackground(
+        return const WeatherBackground(
           season: Season.spring,
-          child: const Center(
+          child: Center(
             child: CircularProgressIndicator(color: Colors.white),
           ),
         );
