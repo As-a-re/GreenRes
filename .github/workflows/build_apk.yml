@@ -31,7 +31,7 @@ jobs:
 
       # 4. Build Release APK with the updated URL
       - name: Build Release APK
-        run: flutter build apk --release --dart-define=GREENRES_API_BASE_URL=https://greenres.onrender.com
+        run: flutter build apk --release --dart-define=GREENRES_API_BASE_URL=https://greenres.onrender.com/api/v1
 
       # 5. Upload finished APK as Artifact
       - name: Upload APK Artifact
